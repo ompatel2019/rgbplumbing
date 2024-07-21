@@ -987,20 +987,12 @@ video {
   height: 2.25rem;
 }
 
-.h-\[1\%\] {
-  height: 1%;
-}
-
 .h-\[2\.5rem\] {
   height: 2.5rem;
 }
 
 .h-\[25vh\] {
   height: 25vh;
-}
-
-.h-\[2rem\] {
-  height: 2rem;
 }
 
 .h-\[2vw\] {
@@ -1027,28 +1019,28 @@ video {
   height: 1px;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
 
-.max-h-\[900px\] {
-  max-height: 900px;
-}
-
-.max-h-\[1000px\] {
-  max-height: 1000px;
-}
-
 .max-h-\[1100px\] {
   max-height: 1100px;
+}
+
+.max-h-\[10rem\] {
+  max-height: 10rem;
+}
+
+.max-h-\[75vh\] {
+  max-height: 75vh;
+}
+
+.max-h-\[75\%\] {
+  max-height: 75%;
+}
+
+.max-h-\[65\%\] {
+  max-height: 65%;
 }
 
 .min-h-11 {
@@ -1059,8 +1051,8 @@ video {
   width: 2.5rem;
 }
 
-.w-12 {
-  width: 3rem;
+.w-24 {
+  width: 6rem;
 }
 
 .w-4 {
@@ -1085,6 +1077,10 @@ video {
 
 .w-\[100vw\] {
   width: 100vw;
+}
+
+.w-\[15\.5vw\] {
+  width: 15.5vw;
 }
 
 .w-\[16px\] {
@@ -1127,10 +1123,6 @@ video {
   width: 5vw;
 }
 
-.w-\[7\.5vw\] {
-  width: 7.5vw;
-}
-
 .w-\[85\%\] {
   width: 85%;
 }
@@ -1141,22 +1133,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-\[10\.5vw\] {
-  width: 10.5vw;
-}
-
-.w-\[15\.5vw\] {
-  width: 15.5vw;
 }
 
 .min-w-0 {
@@ -1173,6 +1149,10 @@ video {
 
 .min-w-\[var\(--radix-select-trigger-width\)\] {
   min-width: var(--radix-select-trigger-width);
+}
+
+.min-w-\[100\%\] {
+  min-width: 100%;
 }
 
 .flex-1 {
@@ -2468,16 +2448,16 @@ body {
     display: none;
   }
 
-  .max-md\:h-4 {
-    height: 1rem;
-  }
-
-  .max-md\:h-6 {
-    height: 1.5rem;
-  }
-
   .max-md\:h-5 {
     height: 1.25rem;
+  }
+
+  .max-md\:w-12 {
+    width: 3rem;
+  }
+
+  .max-md\:w-5 {
+    width: 1.25rem;
   }
 
   .max-md\:w-\[16px\] {
@@ -2486,30 +2466,6 @@ body {
 
   .max-md\:w-\[24px\] {
     width: 24px;
-  }
-
-  .max-md\:w-12 {
-    width: 3rem;
-  }
-
-  .max-md\:w-8 {
-    width: 2rem;
-  }
-
-  .max-md\:w-4 {
-    width: 1rem;
-  }
-
-  .max-md\:w-6 {
-    width: 1.5rem;
-  }
-
-  .max-md\:w-5 {
-    width: 1.25rem;
-  }
-
-  .max-md\:p-2 {
-    padding: 0.5rem;
   }
 
   .max-md\:px-0 {
@@ -2528,13 +2484,13 @@ body {
   .max-md\:text-\[8px\] {
     font-size: 8px;
   }
-
-  .max-md\:text-\[120px\] {
-    font-size: 120px;
-  }
 }
 
 @media not all and (min-width: 480px) {
+  .max-sm\:hidden {
+    display: none;
+  }
+
   .max-sm\:h-\[5rem\] {
     height: 5rem;
   }
@@ -2545,6 +2501,10 @@ body {
 }
 
 @media (min-width: 480px) {
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
