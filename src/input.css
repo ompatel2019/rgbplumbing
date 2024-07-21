@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}
+
+@keyframes greenDot {
+    0%, 50%, 100% {
+        transform: scale(0.8);
+        opacity: 100%;
+    }
+
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
+
+#greenDot {
+    animation: greenDot 2s ease-in-out infinite;
+}
+
+.parent:hover .child {
+    rotate: 15deg;
+}
+
+.tab-1:hover h3 {
+    color: white;
+}
+
+.tab-1:hover p {
+    color: white;
+}
+
+.tab-1:hover .img1 {
+    visibility: hidden;
+    display: none;
+}
+
+.tab-1:hover .img2 {
+    display: block;
+}
+
+.tab-2:hover h3 {
+    color: white;
+}
+
+.tab-2:hover p {
+    color: white;
+}
+
+.tab-2:hover .img1 {
+    visibility: hidden;
+    display: none;
+}
+
+.tab-2:hover .img2 {
+    display: block;
+}
+
+.tab-3:hover h3 {
+    color: white;
+}
+
+.tab-3:hover p {
+    color: white;
+}
+
+.tab-3:hover .img1 {
+    visibility: hidden;
+    display: none;
+}
+
+.tab-3:hover .img2 {
+    display: block;
+}
