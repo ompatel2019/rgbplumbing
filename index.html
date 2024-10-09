@@ -197,8 +197,84 @@
     </div>
   </section>
   
+  <section id="formSec" class="bg-color2 py-12 md:hidden ">
+    <div class="mx-[32px]">
+      <h2 class="text-center text-[5vw] font-semibold text-white">Contact Us</h2>
+      <p class="text-center text-[2vw] text-white">Fill out the form below, so we can get in touch!</p>
+  
+      <div class="mt-[3vw]">
+        <div class="">
+          <form id="contact-form-mobile" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <input type="hidden" name="access_key" value="76ec7c36-11c2-49be-9112-8bbc3455301f">
+  
+            <div>
+              <label for="name" id="formNameMobile" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Name</label>
+              <input type="text" id="nameMobile" name="name" placeholder="Enter your name" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
+            </div>
+            <div>
+              <label for="email" id="formEmailMobile" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Email</label>
+              <input type="email" id="emailMobile" name="email" placeholder="Enter your email" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
+            </div>
+            <div>
+              <label for="inquiry" id="formMessageMobile" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Inquiry</label>
+              <textarea id="inquiryMobile" name="message" placeholder="Describe your issue" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white transition-all hover:border-black" rows="10" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="text-[2vw] w-full p-2 bg-transparent border-white border-[2px] text-white mb-[5vw] rounded font-bold hover:bg-color1 transition-all">Send Inquiry</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="flex flex-row flex-wrap gap-[2vw] justify-between mt-[1.25vw]">
+        <div class="flex flex-col gap-[0.25rem]">
+          <img class="w-[22px] hover:rotate-12 transition-all" src="imgs/Vector.svg" alt="">
+          <p class="text-[8px] text-white font-bold">Email</p>
+          <a href="mailto:info@rgbplumbing.com" class="text-[8px] text-white hover:underline transition-all">info@rgbplumbing.com</a>
+        </div>
+        <div class="flex flex-col gap-[0.25rem] ">
+          <img class="w-[16px] hover:rotate-12 transition-all" src="imgs/Vector-1.svg" alt="">
+          <p class="text-[8px] text-white font-bold">Phone</p>
+          <a href="tel:+61 410 943 582" class="text-[8px] text-white hover:underline transition-all">+61 410 943 582</a>
+        </div>
+        <div class="flex flex-col gap-[0.25rem] ">
+          <img class="w-[3.5vw] hover:rotate-12 transition-all" src="imgs/Vector-2.svg" alt="">
+          <p class="text-[8px] text-white font-bold">Location</p>
+          <a href="https://g.co/kgs/UmRNj7f" class="text-[8px] text-white hover:underline transition-all">Quakers Hill, 2178</a>
+        </div>  
+        <div class="h-[25vh] rounded-md w-[100%] col-span-1 border-2 border-white">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106203.69046520827!2d150.83272009837717!3d-33.712433543764234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xad8985e0606a1053%3A0x7d9a1819fbca2916!2sRGB%20Plumbing%20Services!5e0!3m2!1sen!2sau!4v1718516777143!5m2!1sen!2sau" class="h-[25vh] rounded-md w-[100%]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <script>
     document.getElementById('contact-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          alert("Thank you for contacting us! We will get back to you shortly.");
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong. Please try again later.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please check your internet connection and try again.");
+      }
+    });
+  
+    document.getElementById('contact-form-mobile').addEventListener('submit', async function(event) {
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);
