@@ -8,12 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   <title>RGB Plumbing Services</title>
   <link rel="stylesheet" href="src/output.css" />
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("apf6kz-FBHwCi7A1Y");
-    })();
-  </script>
 </head>
 <body>
   <nav class="bg-color6-gradient flex justify-between px-[96px] py-[1vh] max-md:px-0">
@@ -155,28 +149,30 @@
     <div class="mx-[128px]">
       <h2 class="text-center text-[7.5vw] font-semibold text-white">Contact Us</h2>
       <p class="text-center text-[2vw] text-white">Fill out the form below, so we can get in touch!</p>
-
+  
       <div class="grid grid-cols-2 gap-[4vw] mt-[3vw]">
         <div class="col-span-1">
-          <form id="contact-form" action="#" method="POST" class="space-y-4">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+            <input type="hidden" name="access_key" value="76ec7c36-11c2-49be-9112-8bbc3455301f">
+  
             <div>
               <label for="name" id="formName" class="block text-white mb-[0.25vw] font-bold">Name*</label>
               <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full p-4 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
             </div>
             <div>
-              <label for="number" id="formNumber" class="block text-white mb-[0.25vw] font-bold">Number*</label>
-              <input type="tel" id="number" name="number" placeholder="Enter your phone number" class="w-full p-4 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
+              <label for="email" id="formEmail" class="block text-white mb-[0.25vw] font-bold">Email*</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full p-4 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
             </div>
             <div>
               <label for="inquiry" id="formMessage" class="block text-white mb-[0.25vw] font-bold">Inquiry</label>
-              <textarea id="inquiry" name="inquiry" placeholder="Describe your issue" class="w-full p-4 border-[2px] border-white rounded bg-transparent text-white transition-all hover:border-black" rows="10"></textarea>
+              <textarea id="inquiry" name="message" placeholder="Describe your issue" class="w-full p-4 border-[2px] border-white rounded bg-transparent text-white transition-all hover:border-black" rows="10"></textarea>
             </div>
             <div>
-              <button type="submit" onclick="sendMail(event)" class="w-full p-4 bg-transparent border-white border-[2px] text-white rounded font-bold hover:bg-color1 transition-all">Send Inquiry</button>
+              <button type="submit" class="w-full p-4 bg-transparent border-white border-[2px] text-white rounded font-bold hover:bg-color1 transition-all">Send Inquiry</button>
             </div>
           </form>
         </div>
-
+  
         <div class="col-span-1 flex flex-wrap gap-[2vw] mt-[1.25vw]">
           <div class="flex flex-col gap-2">
             <img class="w-[2vw] hover:rotate-6 transition-all" src="imgs/Vector.svg" alt="">
@@ -200,55 +196,33 @@
       </div>
     </div>
   </section>
-
-  <section id="formSec" class="bg-color2 py-12 md:hidden ">
-    <div class="mx-[32px]">
-      <h2 class="text-center text-[5vw] font-semibold text-white">Contact Us</h2>
-      <p class="text-center text-[2vw] text-white">Fill out the form below, so we can get in touch!</p>
-
-      <div class="mt-[3vw]">
-        <div class="">
-          <form id="contact-form" action="#" method="POST" class="space-y-4">
-            <div>
-              <label for="name" id="formName" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
-            </div>
-            <div>
-              <label for="number" id="formNumber" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Number</label>
-              <input type="tel" id="number" name="number" placeholder="Enter your phone number" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white mb-[1vw] transition-all hover:border-black" required />
-            </div>
-            <div>
-              <label for="inquiry" id="formMessage" class="block text-white mb-[1vw] font-bold text-[2.5vw]">Inquiry</label>
-              <textarea id="inquiry" name="inquiry" placeholder="Describe your issue" class="text-[2vw] w-full p-2 border-[2px] border-white rounded bg-transparent text-white transition-all hover:border-black" rows="10" required></textarea>
-            </div>
-            <div>
-              <button type="submit" onclick="sendMail(event)" class="text-[2vw] w-full p-2 bg-transparent border-white border-[2px] text-white mb-[5vw] rounded font-bold hover:bg-color1 transition-all">Send Inquiry</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="flex flex-row flex-wrap gap-[2vw] justify-between mt-[1.25vw]">
-        <div class="flex flex-col gap-[0.25rem]">
-          <img class="w-[22px] hover:rotate-12 transition-all" src="imgs/Vector.svg" alt="">
-          <p class="text-[8px] text-white font-bold">Email</p>
-          <a href="mailto:info@rgbplumbing.com" class="text-[8px] text-white hover:underline transition-all">info@rgbplumbing.com</a>
-        </div>
-        <div class="flex flex-col gap-[0.25rem] ">
-          <img class="w-[16px] hover:rotate-12 transition-all" src="imgs/Vector-1.svg" alt="">
-          <p class="text-[8px] text-white font-bold">Phone</p>
-          <a href="tel:+61 410 943 582" class="text-[8px] text-white hover:underline transition-all">+61 410 943 582</a>
-        </div>
-        <div class="flex flex-col gap-[0.25rem] ">
-          <img class="w-[3.5vw] hover:rotate-12 transition-all" src="imgs/Vector-2.svg" alt="">
-          <p class="text-[8px] text-white font-bold">Location</p>
-          <a href="https://g.co/kgs/UmRNj7f" class="text-[8px] text-white hover:underline transition-all">Quakers Hill, 2178</a>
-        </div>  
-        <div class="h-[25vh] rounded-md w-[100%] col-span-1 border-2 border-white">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106203.69046520827!2d150.83272009837717!3d-33.712433543764234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xad8985e0606a1053%3A0x7d9a1819fbca2916!2sRGB%20Plumbing%20Services!5e0!3m2!1sen!2sau!4v1718516777143!5m2!1sen!2sau" class="h-[25vh] rounded-md w-[100%]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          alert("Thank you for contacting us! We will get back to you shortly.");
+          form.reset();
+        } else {
+          alert("Oops! Something went wrong. Please try again later.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please check your internet connection and try again.");
+      }
+    });
+  </script>
 
   <section class="my-12 max-md:hidden">
     <div class="text-center">
